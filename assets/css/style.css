@@ -1,15 +1,24 @@
 body{
+	
+	 background-image: url(http://previews.123rf.com/images/iqoncept/iqoncept1306/iqoncept130600083/20329544-A-background-of-question-mark-signs-and-symbols-to-illustrate-learning-education-testing-quizzing-cr-Stock-Photo.jpg);
+}
+#title{
 
+	color:yellow;
+	font-size:65px;
+	text-align:center;
+	background:black;
+}
+#start{
 
+	text-align:center;
 }
 .container{
 
 
 }
-#start{
 
 
-}
 
 #timer{
 
@@ -17,35 +26,44 @@ body{
 }
 
 #questions{
-
+font-size:30px;
+	color:red;
 
 }
 
 .btn{
-
+	margin:5px;
+	font-size:30px;
+	color:red;
+	display:block;
+	
 
 }
 
 #answer0{
-
+font-size:30px;
+	color:red;
 
 }
 
 #answer1{
-
+font-size:30px;
+	color:red;
 
 }
 
 
 #answer2{
 
-
+font-size:30px;
+	color:red;
 
 }
 
 #answer3{
 
-
+font-size:30px;
+	color:red;
 
 }
 
