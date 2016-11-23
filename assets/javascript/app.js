@@ -5,28 +5,7 @@ $(document).ready(function() {
 	var timeUp;
 	
 
-	var questionTime ={
-		time: 30,
-
-
-		reset: function () {
-        	questionTime.time = 30;
-        },
-		start: function(){
-			$("timer").html("Time Left: " + questionTime.time);
-			var counter = setInterval(questionTime.count, 1000);
-		},
-		stop: function(){
-        	clearInterval(counter);
-    	},
-    	count: function(){
-    		questionTimer.time--;
-	        $("#timer").html("Time Left: " + questionTimer.time);
-
-
-    	}
-
-	}	
+	
 
 		function varSet(){
 
@@ -93,6 +72,28 @@ $(document).ready(function() {
 	}
 		
 			});
+var questionTime ={
+		time: 30,
+
+
+		reset: function () {
+        	questionTime.time = 30;
+        },
+		start: function(){
+			$("timer").html("Time Left: " + questionTime.time);
+			var counter = setInterval(questionTime.count, 1000);
+		},
+		stop: function(){
+        	clearInterval(counter);
+    	},
+    	count: function(){
+    		questionTimer.time--;
+	        $("#timer").html("Time Left: " + questionTimer.time);
+
+
+    	}
+    }
+
 	var correct = 0;
 	var incorrect = 0;
 	var noanswer = 0;
@@ -135,8 +136,8 @@ $(document).ready(function() {
 	}
 
 	function wrongAnswer() {
-		clearTimeout(timeIsUp);
-		wrong++;
+		clearTimeout(timeUp);
+		incorrect++;
 		questionTimer.stop();
 		questionTimer.reset();
 		$('#time').empty();
@@ -148,7 +149,7 @@ $(document).ready(function() {
 	
 	function rightAnswer() {
 		clearTimeout(timeUp);
-		right++;
+		correct++;
 		questionTime.stop();
 		questionTime.reset();
 		$('#time').empty();
@@ -156,7 +157,7 @@ $(document).ready(function() {
 		$('#answer0, #answer1, #answer2, #answer3').hide().off('click');
 
 
-		timeUp = setTimeout(advance, 4 * 1000);
+		timeUp = setTimeout(nextQuestion, 4 * 1000);
 	}
 }
 	function nextQuestion() {
